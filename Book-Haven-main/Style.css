@@ -1,0 +1,509 @@
+/* common for all */
+body {
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 0px 0px 0px 40px;
+    background-color: #f6f2e7;
+    border: 1px solid #ccc;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    width: auto;
+    height: 76px;
+
+}
+
+.site-title {
+    padding: 0px 0px 0px 20px;
+}
+
+/* nav bar */
+.menu {
+    background-color: #f6f2e7;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    margin-left: 160px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    display: inline-block;
+    padding: 10px 50px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #c4b499;
+    color: white;
+}
+
+.menu .active {
+    color: white;
+    background-color: #c4b499;
+}
+
+/* dropdown for user */
+#dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+}
+
+#dropdown img {
+    padding: 0px 40px;
+    font-size: 20px;
+    cursor: pointer;
+    height: 50px;
+}
+
+#dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border: 1px solid #ccc;
+}
+
+#dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#dropdown-content a:hover {
+    background-color: #c4b499;
+    color: white;
+}
+
+#dropdown:hover #dropdown-content {
+    display: block;
+}
+
+/*login*/
+.login-form {
+    background: white;
+    padding: 30px;
+    margin: 38px auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.login-form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 90%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login-form input[type="submit"] {
+    width: 97%;
+    padding: 12px;
+    background: linear-gradient(135deg, #f76b1c, #f5a623);
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-form input[type="submit"]:hover {
+    background: linear-gradient(135deg, #f5a623, #f76b1c);
+}
+
+.login-form p {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.login-form a {
+    color: #2980B9;
+    text-decoration: none;
+}
+
+.login-form a:hover {
+    text-decoration: underline;
+}
+
+/*sign up*/
+.signup-form {
+    background: white;
+    padding: 30px;
+    margin: 38px auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.signup-form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+    width: 90%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.signup-form input[type="submit"] {
+    width: 97%;
+    padding: 12px;
+    background: linear-gradient(135deg, #f76b1c, #f5a623);
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.signup-form input[type="submit"]:hover {
+    background: linear-gradient(135deg, #f5a623, #f76b1c);
+}
+
+.signup-form p {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.signup-form a {
+    color: #f76b1c;
+    text-decoration: none;
+}
+
+.signup-form a:hover {
+    text-decoration: underline;
+}
+
+/* about page */
+/* Ensure the help image is properly positioned and styled */
+.help-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+}
+
+.help-container img {
+    width: 50px;
+    /* Adjust size as needed */
+    height: 50px;
+    cursor: pointer;
+}
+
+.help-container a {
+    display: block;
+    color: #6c63ff;
+    /* Custom link color */
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.help-container a:hover {
+    text-decoration: underline;
+}
+
+.section {
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    padding: 2em;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.team-member img {
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 80px;
+    height: 80px;
+}
+
+.team-member p {
+    margin: 0;
+}
+
+/*help page*/
+.container {
+    padding: 2em;
+}
+
+.faq-section {
+    margin-bottom: 2em;
+}
+
+.faq {
+    margin-bottom: 1em;
+}
+
+.faq h3 {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #faf4e8;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #333;
+    text-align: left;
+}
+
+.faq p {
+    display: none;
+    /* Hide all answers by default */
+    padding: 10px;
+    border-left: 2px solid #6c63ff;
+    background-color: #fff;
+    margin: 0;
+}
+
+/* Add an arrow indicator to the FAQ questions */
+.faq h3::after {
+    content: '\25BC';
+    /* Down arrow */
+    float: right;
+    transition: transform 0.3s;
+}
+
+.faq h3.active::after {
+    transform: rotate(180deg);
+    /* Flip the arrow when active */
+}
+
+.faq h3:hover {
+    background-color: #f0f0f0;
+}
+
+.contact-section {
+    margin-top: 40px;
+}
+
+/* home page */
+.slide-container {
+    position: relative;
+    margin: auto;
+    width: 1300px;
+    height: 350px;
+    background-color: #c4b499;
+
+}
+
+.slide-container .slides {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide-container .slides img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+.slide-container .slides img:not(.active) {
+    top: 0;
+    left: -100%;
+}
+
+span.next,
+span.prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 14px;
+    color: #eee;
+    font-size: 24px;
+    font-weight: bold;
+    transition: 0.5s;
+    border-radius: 3px;
+    user-select: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+span.next {
+    right: 20px;
+}
+
+span.prev {
+    left: 20px;
+}
+
+span.next:hover,
+span.prev:hover {
+    background-color: #ede6d6;
+    opacity: 0.8;
+    color: #222;
+}
+
+.dotsContainer {
+    position: absolute;
+    bottom: 5px;
+    z-index: 3;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dotsContainer .dot {
+    width: 50px;
+    height: 1.5px;
+    margin: 0px 2px;
+    border: 3px solid white;
+    border-radius: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+
+.dotsContainer .active {
+    background-color: white;
+}
+
+@keyframes next1 {
+    from {
+        left: 0%
+    }
+
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes next2 {
+    from {
+        left: 100%
+    }
+
+    to {
+        left: 0%;
+    }
+}
+
+@keyframes prev1 {
+    from {
+        left: 0%
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes prev2 {
+    from {
+        left: -100%
+    }
+
+    to {
+        left: 0%;
+    }
+}
+
+/* book in home */
+.book-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    /* Adds space above and below the container */
+    padding: 0 20px;
+}
+
+.book-container h2 {
+    margin-bottom: 20px;
+    /* Adds space between heading and books */
+    font-size: 2em;
+    color: #333;
+    font-weight: 600;
+    text-align: left;
+    /* Keeps the heading aligned to the left */
+}
+
+.book {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Adjusts the number of columns based on screen size */
+    gap: 20px;
+    align-items: start;
+    justify-items: start;
+    /* Ensures that images align with the start of the container */
+}
+
+.book img {
+    width: 230px;
+    height: 265px;
+    object-fit: contain;
+    /* Ensures the images fit well without distortion */
+
+}
+.book a{
+    display: flex;
+    text-decoration: none;
+    color:black
+}
+
+.book a div{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+footer {
+    top: 90%;
+    background-color: white;
+    color: black;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}

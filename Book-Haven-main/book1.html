@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Haven</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="book.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <img src="img/logo(1).jpg" alt="BookShelf Logo" id="logo">
+            <h1 class="site-title">Book Haven</h1>
+        </div>
+        <div class="menu">
+            <a href="home.html" class="nav active">Home</a>
+             <a href="#">Genres</a>
+            <a href="#">Adaptations</a>
+            <a href="about.html">About Us</a>
+        </div>
+        <div id="dropdown">
+            <img src="img/User.png" alt="user">
+            <div id="dropdown-content">
+                <a href="login.html">Login</a>
+                <a href="signup.html">SignUp</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="book-container">
+        <div class="book">
+            <img src="img/book1.png" alt="The Only Good Indians"> 
+            <div class="book-details">
+                <h2>The Only Good Indians</h2>
+                <p>Four American Indian men from the Blackfeet Nation, who were childhood friends, find themselves in a
+                    desperate struggle for their lives against an entity that wants to exact revenge upon them for what
+                    they did during an elk hunt ten years earlier. Not just them, either, but their families and
+                    friends.</p>
+                <button class="read" onclick="openPDF()">Read Now</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Book Haven. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function openPDF() {
+            window.open('pdf/book1.pdf', '_blank');
+        }
+    </script>
+</body>
+
+</html>

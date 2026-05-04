@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Haven</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="book.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <img src="img/logo(1).jpg" alt="BookShelf Logo" id="logo">
+            <h1 class="site-title">Book Haven</h1>
+        </div>
+        <div class="menu">
+            <a href="home.html" class="nav active">Home</a>
+           <a href="#">Genres</a>
+            <a href="#">Adaptations</a>
+            <a href="about.html">About Us</a>
+        </div>
+        <div id="dropdown">
+            <img src="img/User.png" alt="user">
+            <div id="dropdown-content">
+                <a href="login.html">Login</a>
+                <a href="signup.html">SignUp</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="book-container" style="background-color: rgb(172, 98, 98);">
+        <div class="book">
+            <img src="img/book3.png" alt="The Silent Patient">
+            <div class="book-details">
+                <h2>The Silent Patient</h2>
+                <p>Theo Faber is a criminal psychotherapist who has waited a long time for the opportunity to work with
+                    Alicia. His determination to get her to talk and unravel the mystery of why she shot her husband
+                    takes him down a twisting path into his own motivations—a search for the truth that threatens to
+                    consume him.</p>
+                <button class="read" onclick="openPDF()">Read Now</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Book Haven. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function openPDF() {
+            window.open('pdf/book3.pdf', '_blank');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Book Haven</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <style>
+        .body {
+            background-color: #f6f2e7;
+            height: 100vh;
+            margin: 0;
+        }
+        .header{
+            background-color: #f6f2e7;
+            text-decoration: none;
+            border:none;
+            justify-content: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body class="body">
+
+    <header class="header">
+        <img src="img/logo(1).jpg" alt="BookShelf Logo" id="logo">
+        <h1 class="site-title">Book Haven</h1>
+    </header>
+    <form class="login-form" id="login-form">
+        <h2>Login to Your Account</h2>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <input type="submit" value="Log In">
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+    </form>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            let username = document.getElementById('username').value;
+            let password = document.getElementById('password').value;
+
+            // Retrieve user data from localStorage
+            let storedUser = JSON.parse(localStorage.getItem('user'));
+
+            if (storedUser && storedUser.username === username && storedUser.password === password) {
+                // Alert box showing username and password
+                alert(`Login successful!`);
+
+                // Redirect to homepage or book purchase page
+                window.location.href = 'home.html';
+            } else {
+                alert("Invalid username or password.");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

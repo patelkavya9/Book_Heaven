@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Haven</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+
+        <img src="img/logo(1).jpg" alt="BookShelf Logo" id="logo">
+        <h1 class="site-title">Book Haven</h1>
+
+
+        <div class="menu">
+            <a href="home.html" class="nav active">Home</a>
+             <a href="#">Genres</a>
+            <a href="#">Adaptations</a>
+            <a href="about.html">About Us</a>
+        </div>
+
+        <div id="dropdown">
+            <img src="img/User.png" alt="user">
+            <div id="dropdown-content">
+                <a href="login.html">Login</a>
+                <a href="signup.html">SignUp</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="slide-container">
+        <div class="slides">
+            <img src="img/image-1.png" class="active">
+            <img src="img/image-2.png">
+            <img src="img/image-3.png">
+            <img src="img/image-4.png">
+            <img src="img/image-5.png">
+        </div>
+
+        <div class="buttons">
+            <span class="prev">&#10094;</span>
+            <span class="next">&#10095;</span>
+        </div>
+
+        <div class="dotsContainer">
+            <div class="dot active" attr='0' onclick="switchImage(this)"></div>
+            <div class="dot" attr='1' onclick="switchImage(this)"></div>
+            <div class="dot" attr='2' onclick="switchImage(this)"></div>
+            <div class="dot" attr='3' onclick="switchImage(this)"></div>
+            <div class="dot" attr='4' onclick="switchImage(this)"></div>
+        </div>
+    </div>
+
+    <div class="book-container">
+        <div>
+            <h2>Popular Books</h2>
+        </div>
+        <div class="book">
+            <a href="book1.html"><img src="img/book1.png" alt="Book 1">
+                <div><b style="font-size: 30px;">The Only Good Indians</b><br><br>
+                <u><b>AUTHOR:</b></u> Stephen Graham Jones<br><br><u><b>GENERS:</b></u> Horror fiction, Thriller</div></a>
+            <a href="book2.html"><img src="img/book2.jpg" alt="Book 2">
+                <div><b style="font-size: 30px;">The Seven Husbands of Evelyn Hugo</b><br><br>
+                    <u><b>AUTHOR:</b></u> Taylor Jenkins Reid.<br><br>
+                    <u><b>GENERS:</b></u> Romance novel, Historical-Psychological-Domestic Fiction, LGBT literature</div></a>
+            <a href="book3.html"><img src="img/book3.png" alt="Book 3">
+                <div><b style="font-size: 30px;">The Silent Patient</b><br><br>
+                    <u><b>AUTHOR:</b></u> Alex Michaelides<br><br>
+                    <u><b>GENERS:</b></u> Mystery Thriller, Suspense, Crime Fiction</div></a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Book Haven. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

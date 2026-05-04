@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Book Haven</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <style>
+        .body {
+
+            background-color: #f6f2e7;
+            height: 100vh;
+            margin: 0;
+        }
+        .header{
+            background-color: #f6f2e7;
+            text-decoration: none;
+            border:none;
+            justify-content: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body class="body">
+
+    <header class="header">
+        <img src="img/logo(1).jpg" alt="BookShelf Logo" id="logo">
+        <h1 class="site-title">Book Haven</h1>
+    </header>
+    <form class="signup-form" id="signup-form">
+        <h2>Create an Account</h2>
+        <input type="text" id="fullname" placeholder="Full Name" required>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <input type="password" id="confirm_password" placeholder="Confirm Password" required>
+        <input type="submit" value="Sign Up">
+        <p>Already have an account? <a href="login.html">Log In</a></p>
+    </form>
+
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            let fullname = document.getElementById('fullname').value;
+            let username = document.getElementById('username').value;
+            let email = document.getElementById('email').value;
+            let password = document.getElementById('password').value;
+            let confirmPassword = document.getElementById('confirm_password').value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return;
+            }
+
+            // // Store user data in localStorage
+            let user = {
+                fullname: fullname,
+                username: username,
+                email: email,
+                password: password
+            };
+            localStorage.setItem('user', JSON.stringify(user));
+
+            // Alert box showing username and password
+            alert(`Account created successfully!\nUsername: ${username}\nPassword: ${password}`);
+
+            window.location.href = 'login.html'; // Redirect to login page
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - Bookstore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="img/logo(1).jpg" alt="BookShelf Logo" id="logo">
+        <h1 class="site-title">Book Haven</h1>
+
+        <div class="menu">
+            <a href="home.html">Home</a>
+             <a href="#">Genres</a>
+            <a href="#">Adaptations</a>
+            <a href="about.html" class="nav active">About Us</a>
+        </div>
+
+        <div id="dropdown">
+            <img src="img/User.png" alt="user">
+            <div id="dropdown-content">
+                <a href="login.html">Login</a>
+                <a href="signup.html">SignUp</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq">
+
+                <h3>What payment methods do you accept?</h3>
+                <p>We accept all major PayPal, GPay, UPI payments, bank transfers, and all other online means of
+                    payments. We only accept online means of payments.</p>
+
+                <h3>How do I find a specific book?</h3>
+                <p>Use our search bar at the top of the page. Enter the title, author, or ISBN number to find the book
+                    you're looking for. You can also browse by category or author through our navigation menu.</p>
+
+                <h3>Do you offer original copies of these books?</h3>
+                <p>No, we don't offer original copies of these books as it doesn't signify our code of conduct.</p>
+
+                <h3>Do you offer scratch cards?</h3>
+                <p>Yes, we offer scratch cards in various denominations. You can purchase them directly from our website
+                    and they can be used for any purchase.</p>
+
+                <h3>How do I update my account information?</h3>
+                <p>To update your account information, log in to your account and go to the "Account Settings" section.
+                    From there, you can update your personal details and payment methods.</p>
+
+                <h3>How do I subscribe to your newsletter?</h3>
+                <p>You can subscribe to our newsletter by entering your email address in the subscription box at the
+                    bottom of our homepage. You'll receive updates on new arrivals, promotions, and events.</p>
+
+                <h3>How can I provide feedback or suggestions?</h3>
+                <p>We welcome your feedback and suggestions. Please email us at feedback@bookstore.com or use the
+                    contact form on our website to share your thoughts.</p>
+
+            </div>
+
+            <div class="contact-section">
+                <section>
+                    <h2>Contact Us</h2>
+                    <p>If you have any questions, feedback, or just want to chat about books, feel free to reach
+                        out to us at:</p>
+                    <p>Email: <a href="mailto:contact@bookhaven.com">contact@bookhaven.com</a></p>
+                    <p>Follow us on social media for updates and more bookish content!</p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Book Haven. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for toggling the FAQ dropdown
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqHeaders = document.querySelectorAll('.faq h3');
+
+            faqHeaders.forEach(header => {
+                header.addEventListener('click', function () {
+                    const answer = this.nextElementSibling;
+
+                    // Toggle active class for the arrow
+                    this.classList.toggle('active');
+
+                    // Toggle the visibility of the answer
+                    if (answer.style.display === 'block') {
+                        answer.style.display = 'none';
+                    } else {
+                        answer.style.display = 'block';
+                    }
+                });
+            });
+        });   
+    </script>
+
+</body>
+
+</html>

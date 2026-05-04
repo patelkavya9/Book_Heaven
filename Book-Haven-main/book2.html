@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Haven</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="book.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <img src="img/logo(1).jpg" alt="BookShelf Logo" id="logo">
+            <h1 class="site-title">Book Haven</h1>
+        </div>
+        <div class="menu">
+            <a href="home.html" class="nav active">Home</a>
+             <a href="#">Genres</a>
+            <a href="#">Adaptations</a>
+            <a href="about.html">About Us</a>
+        </div>
+        <div id="dropdown">
+            <img src="img/User.png" alt="user">
+            <div id="dropdown-content">
+                <a href="login.html">Login</a>
+                <a href="signup.html">SignUp</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="book-container" style="background-color: #86ab89;">
+        <div class="book">
+            <img src="img/book2.jpg" alt="The Seven Husbands of Evelyn Hugo">
+            <div class="book-details">
+                <h2>The Seven Husbands of Evelyn Hugo</h2>
+                <p>The Seven Husbands of Evelyn Hugo is a historical drama novel by American novelist Taylor Jenkins
+                    Reid, and published by Atria Books in 2017. It tells the story of the fictional Old Hollywood star,
+                    Evelyn Hugo, who, at age 79, gives a final interview to unknown journalist, Monique Grant</p>
+                <button class="read" onclick="openPDF()">Read Now</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Book Haven. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function openPDF() {
+            window.open('pdf/book2.pdf', '_blank');
+        }
+    </script>
+</body>
+
+</html>
